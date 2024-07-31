@@ -15,7 +15,7 @@ import org.springframework.test.annotation.Rollback;
 @Rollback(false)      
 public class UserRepositoryTests {   
    
-	@Autowired  
+	@Autowired   
 	private TestEntityManager entityManager;   
 	
 	@Autowired
