@@ -1,0 +1,14 @@
+   .icon a img {
+        margin-right: 15px;
+      
+    }
+
+    .icon a:hover img {
+        transform: scale(1.2);
+        
+    }
+    .navbar .nav-item:hover .nav-link{
+	background-color:white;
+	color:blue;
+	border-radius:5px;
+}

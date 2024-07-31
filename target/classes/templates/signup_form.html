@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Sign Up - CodeJava</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f7f9fc;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .form-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+        .form-header {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: 500;
+        }
+        .form-control {
+            border-radius: 20px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body>
+ <div th:replace="header :: header"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 form-container">
+                <div class="form-header text-center">
+                    <h1 class="h3 mb-3 font-weight-normal">User Registration - Sign Up</h1>
+                </div>
+                <form th:action="@{/process_register}" th:object="${user}" method="post">
+                    <div th:if="${errorMessage}" class="alert alert-danger" role="alert">
+                        <span th:text="${errorMessage}"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" th:field="*{firstName}" class="form-control" required minlength="2" maxlength="20" />
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" th:field="*{lastName}" class="form-control" required minlength="2" maxlength="20" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" th:field="*{email}" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" th:field="*{password}" class="form-control" required minlength="6" maxlength="10" />
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
