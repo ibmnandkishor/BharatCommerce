@@ -12,7 +12,7 @@ import org.springframework.test.annotation.Rollback;
  
 @DataJpaTest 
 @AutoConfigureTestDatabase(replace = Replace.NONE)    
-@Rollback(false)         
+@Rollback(false)          
 public class UserRepositoryTests {   
    
 	@Autowired   
