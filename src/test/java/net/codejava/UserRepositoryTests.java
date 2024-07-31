@@ -20,7 +20,7 @@ public class UserRepositoryTests {
 	 
 	@Autowired
 	private UserRepository repo;
-	
+	 
 	@Test
 	public void testCreateUser() {
 		User user = new User();
