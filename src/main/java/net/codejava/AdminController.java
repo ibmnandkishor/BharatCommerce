@@ -11,7 +11,7 @@ import org.springframework.ui.Model;
 @Controller 
 public class AdminController {
 
-    @GetMapping("/admin")
+    @GetMapping("/admin") 
     public String admin() {
         return "admin_login";
     }
