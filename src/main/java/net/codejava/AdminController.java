@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.ui.Model; 
   
-@Controller 
+@Controller  
 public class AdminController { 
 
     @GetMapping("/admin") 
