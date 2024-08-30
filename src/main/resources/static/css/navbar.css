@@ -7,8 +7,27 @@
         transform: scale(1.2);
         
     }
-    .navbar .nav-item:hover .nav-link{
+   .navbar .nav-item:hover .nav-link{
 	background-color:white;
 	color:blue;
 	border-radius:5px;
+} 
+
+ .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #555;
 }

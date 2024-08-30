@@ -1,12 +1,19 @@
 package net.codejava;
 
+import java.util.List;
+
 import javax.persistence.Column;
+
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+
 
 @Entity
 @Table(name = "users")
@@ -27,6 +34,13 @@ public class User {
 	
 	@Column(name = "last_name", nullable = false, length = 20)
 	private String lastName;
+	private String captcha;
+	private String hiddenCaptcha;
+	private String realCaptcha;
+	
+	private String otp;
+	
+	
 
 	public Long getId() {
 		return id;
@@ -67,7 +81,37 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
+	public String getCaptcha() {
+		return captcha;
+	}
+	public void setCaptcha(String captcha) {
+		this.captcha = captcha;
+	}
+	public String getHiddenCaptcha() {
+		return hiddenCaptcha;
+	}
+	public void setHiddenCaptcha(String hiddenCaptcha) {
+		this.hiddenCaptcha = hiddenCaptcha;
+	}
+	public String getRealCaptcha() {
+		return realCaptcha;
+	}
+	public void setRealCaptcha(String realCaptcha) {
+		this.realCaptcha = realCaptcha;
+	}
 	
+	 public String getOtp() {
+	        return otp;
+	    }
+
+	    public void setOtp(String otp) {
+	        this.otp = otp;
+	    }
+
 	
+
+
+		
 	
 }

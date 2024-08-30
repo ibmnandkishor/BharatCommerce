@@ -12,7 +12,7 @@
 	<div>
 		<form th:action="@{/logout}" method="post">
 			<p>
-				Welcome <b>[[${#request.userPrincipal.principal.fullName}]]</b>
+			
 			</p>
 			<input type="submit" value="Sign Out" />
 		</form>
@@ -31,14 +31,27 @@
 					<th>Last Name</th>
 				</tr>
 			</thead>
-			<tbody>
+			<!-- <tbody>
 				<tr th:each="user: ${listUsers}">
 					<td th:text="${user.id}">User ID</td>
 					<td th:text="${user.email}">E-mail</td>
 					<td th:text="${user.firstName}">First Name</td>
 					<td th:text="${user.lastName}">Last Name</td>
 				</tr>
-			</tbody>
+			</tbody>  -->
+			
+			 <tbody>
+                    <tr th:each="product : ${products}">
+                        <td th:text="${product.name}"></td>
+                        <td th:text="${product.brand}"></td>
+                        <td th:text="${product.category}"></td>
+                        <td th:text="${product.price}"></td>
+                        <td>
+                            <img th:src="@{${product.imageUrl}}" alt="Product Image" class="img-thumbnail"/>
+                        </td>
+                        
+                    </tr>
+                </tbody>
 		</table>
 	</div>
 </div>
