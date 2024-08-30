@@ -3,7 +3,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/SpringBootRegistrationLoginApplication-0.0.1-SNAPSHOT.jar SpringBootRegistrationLoginApplication.jar
-EXPOSE 3306
-ENTERYPOINT ["java","-jar","SpringBootRegistrationLoginApplication.jar"]
+COPY --from=build /target/BharatCommerce-0.0.1-SNAPSHOT.jar BharatCommerce.jar
+EXPOSE 4001
+ENTERYPOINT ["java","-jar","BharatCommerce.jar"]
  
