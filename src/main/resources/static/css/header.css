@@ -1,0 +1,66 @@
+.navbar-dark .navbar-nav .nav-link.active {
+            color: #ffc107; /* Adjust color as needed */
+        }
+        
+        /* Custom styles for the header */
+        header {
+            background-color: #FFD28F; /* Light orange background */
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: #5a5a5a;
+        }
+
+        .btn-primary {
+            margin-left: 10px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff; /* Blue on hover */
+        }
+
+        .navbar-toggler-icon {
+            color: white; /* Toggler icon color */
+        }
+
+        /* Adjust container-fluid padding */
+        .container-fluid {
+            padding: 0 15px;
+        }
+
+        .text-center span {
+            color: purple;
+            text-shadow: 2px 2px 4px #303f9f;
+            font-size: 30px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar-expand-lg {
+            background-color: #E0E5B6; /* Light green background for secondary navbar */
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .text-content {
+            opacity: 0; /* Start with hidden content */
+            animation: fadeIn 3s ease-out forwards; /* Adjust duration as needed */
+        }
+
+        .text-content.visible {
+            opacity: 1; /* Make content visible when class is added */
+        }

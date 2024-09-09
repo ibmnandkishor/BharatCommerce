@@ -3,17 +3,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Bharat Commerce</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+<link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+	integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="/css/footer.css">
 
 </head>
 <style>
-
+	body {
+		           /* Replace with your desired gradient colors and direction */
+		           background: linear-gradient(to right, #FDFCFB , #E2D1C3);
+		           /* Optionally, you can add more specific background properties */
+		           background-repeat: no-repeat;
+		           background-attachment: fixed; /* Ensures the gradient covers the whole viewport */
+		       }
     .icon a img {
         margin-right: 15px;
       
@@ -62,16 +70,14 @@ height:280px;}
 
 </style>
 
-<body>
-
 <div class="container-fluid p-1 bg-dark"></div>
 <div class="container-fluid p-3" >
 	<div class="row">
-		<div class="col-md-3 text-startk">
+		<div class="col-md-4 text-startk">
 			<img src="../stateimg/jammu.png" width="50px" height="50px">
-			<span  style="color: purple;text-shadow: 2px 2px 4px #303f9f; font-size: 30px;">Welcome Jammu Kashmir</span>
+			<span  style="color: purple;text-shadow: 2px 2px 4px #303f9f; font-size: 30px;">Welcome To Jammu & Kashmir</span>
 		</div>
-		<div class="col-md-6 text-center text-success">
+		<div class="col-md-5 text-center text-success">
 			
 		</div>
 
@@ -88,7 +94,7 @@ height:280px;}
 		
 	</div>
 </div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rosybrown;">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="#"><i class="fa-solid fa-house"></i></a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -98,79 +104,72 @@ height:280px;}
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-			<li class="nav-item"><a class="nav-link active"
-					aria-current="page" href="/" style="font-size:20px;">Home</a></li>	
+			<ul class="navbar-nav me-auto  mb-lg-0">
+			<li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="/" style="font-size:20px;">Home</a>
+			</li>	
 		 <li class="nav-item">
-            <div class="btn-group me-2 col-3" role="group" aria-label="First group">
-    			<button type="button" role="group" aria-label="First group" class="btn  btn-lg btn-lg dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="btn-group col-3" role="group" aria-label="First group">
+    			<button type="button" role="group" style="font-size: 20px;" aria-label="First group" class="btn  btn-lg btn-lg dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
       			Clothes
     			</button>
     			<ul class="dropdown-menu">
-      				<li><a class="dropdown-item " href="../clothes/jkkid"> Kids</a></li>
+      				<li><a class="dropdown-item " href="../clothes/jkikid"> Kids</a></li>
       				<li><a class="dropdown-item" href="../clothes/jkmen"> Men's</a></li>
       				<li><a class="dropdown-item" href="../clothes/jkwomen"> Women's</a></li>
-    			</ul> 
-    			
+    			</ul>
   			</div>
                     </li>
-        
        <li class="nav-item">
-                         <div class="btn-group me-2 col-3" role="group" aria-label="First group">
-    			<button type="button" role="group" aria-label="First group" class="btn  btn-lg btn-lg dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                         <div class="btn-group  col-3" role="group" aria-label="First group">
+    			<button type="button" style="font-size: 20px;" role="group" aria-label="First group" class="btn  btn-lg btn-lg dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
       			Food
     			</button>
     			<ul class="dropdown-menu">
-      				<li><a class="dropdown-item " href="../food/jkveg"> Veg Food</a></li>
+      				<li><a class="dropdown-item " href="../food/jkveg" value="food"> Veg Food</a></li>
       				<li><a class="dropdown-item" href="../food/jknon"> Non-Veg Food</a></li>
     			</ul> 
-    			
   			</div>
-                    </li>
-        
-        
-         <li class="nav-item">
-                        <div class="btn-group me-2 col-3" role="group" aria-label="First group">
-    			<button type="button" role="group" aria-label="First group" class="btn  btn-lg btn-lg dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
-      			Visiting
-    			</button>
-    			<ul class="dropdown-menu">
-      				<li><a class="dropdown-item " href="../clothes/sikkimkid.jsp"> Kids</a></li>
-      				<li><a class="dropdown-item" href="../clothes/sikkimmen.jsp"> Men's</a></li>
-      				<li><a class="dropdown-item" href="../clothes/sikkimwomen.jsp"> Women's</a></li>
-    			</ul> 
-    			
-  			</div>
-                    </li>
+                    </li>  
+                        <div class="btn-group  col-5">
+							<a th:href="@{'http://bharatcommerce.000.pe/?i=1'}" class="button" style="display: inline-block; background-color:antiquewhite; padding: 0.75rem 1.25rem; border-radius: 10rem; color: rgb(0, 0, 0); text-transform: uppercase; font-size: 1rem; letter-spacing: 0.15rem; transition: all 0.3s; position: relative; overflow: hidden; z-index: 1; text-decoration: none;"
+															      onmouseover="this.style.color='black'; this.children[0].style.width='100%';"
+															      onmouseout="this.style.color='black'; this.children[0].style.width='0%';" target="_blank">
+															   Tourist places
+															     <span style="display: block; position: absolute; bottom: 0; left: 0; width: 0%; height: 100%; background-color: #FFDAB9; border-radius: 10rem; z-index: -2; transition: all 0.3s;"></span>
+															     <span style="display: block; position: absolute; bottom: 0; left: 0; width: 0%; height: 100%; background-color: #008fb3; border-radius: 10rem; z-index: -1; transition: all 0.3s;"></span>
+															   </a>
+  			</div>  
 			</ul>
+	
+				
+			 <form class="d-flex">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			<!--<li class="nav-item"><a class="nav-link active" href="#" id="view-cart" aria-current="page">
+			<i class="fa-solid fa-cart-shopping"></i>Cart(<span id="cart-count" style="color:red">0</span>)</a></li> -->
 			
-			
-			
-		 <form class="d-flex">
-		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-		<!--<li class="nav-item"><a class="nav-link active" href="#" id="view-cart" aria-current="page">
-		<i class="fa-solid fa-cart-shopping"></i>Cart(<span id="cart-count" style="color:red">0</span>)</a></li> -->
-		
-		<li class="nav-item">
-                 <div class="btn-group me-2 col-3" role="group" aria-label="First group">
-    			<button type="button" role="group" aria-label="First group" class="btn  btn-lg btn-lg dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
-      			View Cart (<span id="cart-count" style="color:red">0</span>)
-    			</button>
-            <div class="dropdown-menu dropdown-menu-right p-3" aria-labelledby="cartDropdown">
-            	<h5>Your Cart</h5>
-                <ul class="list-group" id="cart-items"></ul>
-                <h6 class="mt-3">Total: Rs<span id="cart-total">0.00</span></h6>
-                <button class="btn btn-success mt-3" id="checkout">Checkout</button>
-            </div>
-            </div>
-        </li>
-		<li class="nav-item"> <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-user-tie"></i>Login</a></li>
-		 </ul>
-        
-      </form>
+			<li class="nav-item">
+	                 <div class="btn-group me-2 col-3" role="group" aria-label="First group">
+	    			<button type="button" role="group" aria-label="First group" class="btn  btn-lg btn-lg dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+	      			View Cart (<span id="cart-count" style="color:red">0</span>)
+	    			</button>
+	            <div class="dropdown-menu dropdown-menu-right p-3" aria-labelledby="cartDropdown">
+	            	<h5>Your Cart</h5>
+	                <ul class="list-group" id="cart-items"></ul>
+	                <h6 class="mt-3">Total: Rs<span id="cart-total">0.00</span></h6>
+	                <button class="btn btn-success mt-3" id="checkout">Checkout</button>
+	            </div>
+	            </div>
+	        </li>
+			<li class="nav-item"> <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-user-tie"></i>Login</a></li>
+			 </ul>
+	        
+	      </form>
+			</div>
 		</div>
-	</div>
-</nav>
+	</nav>
+</div>
+
 <br>
 <br>
 
@@ -183,20 +182,35 @@ height:280px;}
     <div class=" col-md-8">
 		<slider>
 			<div class="container">
-			        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" >
+			        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1200" >
 			            <div class="carousel-inner">
 			              <div class="carousel-item active">
-			                <img src="../apimg/img3.jpg"  alt="..." width="100%" height="400px"> 
+			                <img src="../jkimg/f.jpg"  alt="..." width="100%" height="600px"> 
 			              </div>
 			              <div class="carousel-item">
-			                <img src="../apimg/img2.jpg"  alt="..." width="100%" height="400px">
+			                <img src="../jkimg/j.jpg"  alt="..." width="100%" height="600px">
 			              </div>
 			              <div class="carousel-item">
-			                <img src="../apimg/img1.jpg"  alt="..." width="100%" height="400px">
+			                <img src="../jkimg/jam.jpg"  alt="..." width="100%" height="600px">
 			              </div>
 			              <div class="carousel-item">
-			                <img src="../apimg/img3.jpg"  alt="..." width="100%" height="400px">
+			                <img src="../jkimg/kas.jpg"  alt="..." width="100%" height="600px">
 			              </div>
+						  <div class="carousel-item">
+						  <img src="../jkimg/nd.jpg"  alt="..." width="100%" height="600px">
+						  </div>
+						<div class="carousel-item">
+						 <img src="../jkimg/pah.jpg"  alt="..." width="100%" height="600px">
+						   </div>
+						   <div class="carousel-item">
+						   	<img src="../jkimg/s.jpg"  alt="..." width="100%" height="600px">
+						   	</div>
+							<div class="carousel-item">
+							<img src="../jkimg/son.jpg"  alt="..." width="100%" height="600px">
+							</div>
+							<div class="carousel-item">
+														<img src="../jkimg/v.jpg"  alt="..." width="100%" height="600px">
+														</div>
 			           </div>
 			         </div>
 			 </div>
@@ -214,19 +228,21 @@ height:280px;}
 
 
 <!--  famous clothes -->
-
+<br><br> 
 <div class="container">
-<h2> Famous Clothes </h2>
+<h2 style="text-align: center; font-family: Georgia;"> Ｆａｍｏｕｓ░Ｔｈｉｎｇｓ░ｔｏ░ｄｏ </h2>
+<h2 style="text-align: center; font-family: Georgia;"> Ξｘｐｌｏｒｅ░ｍｏｒｅ</h2>
+<br><br>
 
   <div class="row">
     <div class=" col-md-3">
     <div class="card">
-    <img src="../apimg/img1.jpeg" class="card-img-top" alt="PEARL">
+    <img src="../jkimg/pas.jpg" class="card-img-top" alt="Pashmina Shawls & Blankets">
     <div class="card-body  text-center">
-    	<h5 class="card-title">PEARL</h5>
-        <p class="card-text">Rs.199,999.00</p>
-        <button class="btn btn-primary" onclick="addToCart('PEARL', 199,999.00, '../apimg/img1.jpeg')">Add to Cart</button>
-   		<button type="button" class="btn btn-info">Buy NOW</button>
+    	<h5 class="card-title">Pashmina Shawls & Blankets</h5>
+        <p class="card-text">Starting Price Rs.2058.00</p>
+        <button class="btn btn-primary" onclick="addToCart('Pashmina Shawls & Blankets', 2058.00, '../jkimg/pas.jpg')">Add to Cart</button>
+   		<button type="button" class="btn btn-info" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Buy Now</button>
     </div>
     </div>
     </div>
@@ -234,30 +250,36 @@ height:280px;}
   
 	<div class=" col-md-3">
 	    <div class="card">
-	    <img src="../apimg/img3.jpeg" class="card-img-top" alt="...">
+	    <img src="../jkimg/carp.jpg" class="card-img-top" alt="Carpets">
 	    <div class="card-body  text-center">
-	      <button type="button" class="btn btn-primary">Cart</button>
-	   <button type="button" class="btn btn-info">Buy NOW</button>
+			<h5 class="card-title">Carpets</h5>
+			        <p class="card-text">Starting Price Rs.6088.00</p>
+			        <button class="btn btn-primary" onclick="addToCart('Carpets', 6088.00, '../jkimg/carp.jpg')">Add to Cart</button>
+			   		<button type="button" class="btn btn-info" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Buy Now</button>
 	    </div>
 	    </div>
 	    </div>
 	   
 	     <div class=" col-md-3">
 	    <div class="card">
-	    <img src="../apimg/img4.jpeg" class="card-img-top" alt="...">
-	    <div class="card-body  text-center">
-	        <button type="button" class="btn btn-primary">Cart</button>
-	   <button type="button" class="btn btn-info">Buy NOW</button>
+			<img src="../jkimg/jewe.jpg" class="card-img-top" alt="Traditional Jewelry">
+				    <div class="card-body  text-center">
+						<h5 class="card-title">Traditional Jewelry</h5>
+						        <p class="card-text">Starting Price Rs.869.00</p>
+						        <button class="btn btn-primary" onclick="addToCart('Traditional Jewelry', 869.00, '../jkimg/jewe.jpg')">Add to Cart</button>
+						   		<button type="button" class="btn btn-info" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Buy Now</button>
 	    </div>
 	    </div>
 	    </div>
 	    
 	     <div class=" col-md-3">
 	    <div class="card">
-	    <img src="../apimg/img5.jpeg" class="card-img-top" alt="...">
-	    <div class="card-body  text-center">
-	     <button type="button" class="btn btn-primary">Cart</button>
-	   <button type="button" class="btn btn-info">Buy NOW</button>
+			<img src="../jkimg/wood.jpg" class="card-img-top" alt="Wood Carving Objects">
+							 <div class="card-body  text-center">
+							<h5 class="card-title"> Wood Carving Objects</h5>
+							<p class="card-text">Starting Price Rs.16655.00</p>
+							<button class="btn btn-primary" onclick="addToCart('Wood Carving Objects', 16655.00, '../jkimg/wood.jpg')">Add to Cart</button>
+				<button type="button" class="btn btn-info" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Buy Now</button>
 	    </div>
 	    </div>
 	    </div>
@@ -267,93 +289,126 @@ height:280px;}
   <div class="row">
     <div class=" col-md-3">
     <div class="card">
-    <img src="../apimg/img5.jpeg" class="card-img-top" alt="...">
-    <div class="card-body  text-center">
-  <button type="button" class="btn btn-primary">Cart</button>
-   <button type="button" class="btn btn-info">Buy NOW</button>
+    <img src="../jkimg/sil.jpg" class="card-img-top" alt="Silverware Item">
+	<div class="card-body  text-center">
+								<h5 class="card-title">Silverware Item</h5>
+								<p class="card-text">Starting Price Rs.2750.00</p>
+								<button class="btn btn-primary" onclick="addToCart('Silverware Item', 2750.00, '../jkimg/sil.jpg')">Add to Cart</button>
+				<button type="button" class="btn btn-info" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Buy Now</button>
     </div>
     </div>
     </div>
    
     <div class=" col-md-3">
     <div class="card">
-    <img src="../apimg/img6.jpeg" class="card-img-top" alt="...">
-    <div class="card-body  text-center">
-      <button type="button" class="btn btn-primary">Cart</button>
-      
-   <button type="button" class="btn btn-info">Buy NOW</button>
+		<img src="../jkimg/fo.jpg" class="card-img-top" alt="Popular Fruits">
+			<div class="card-body  text-center">
+	<h5 class="card-title">Popular Fruits</h5>
+<p class="card-text">Starting Price Rs.455.00</p>
+	<button class="btn btn-primary" onclick="addToCart('Popular Fruits', 455.00, '../jkimg/fo.jpg')">Add to Cart</button>
+<button type="button" class="btn btn-info" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Buy Now</button>
     </div>
     </div>
     </div>
    
      <div class=" col-md-3">
     <div class="card">
-    <img src="../apimg/img3.jpeg" class="card-img-top" alt="...">
+    <img src="../jkimg/dry.jpg" class="card-img-top" alt="Dry Fruits">
     <div class="card-body  text-center">
-        <button type="button" class="btn btn-primary">Cart</button>
-   <button type="button" class="btn btn-info">Buy NOW</button>
+			<h5 class="card-title"> Dry Fruits</h5>
+		<p class="card-text">Starting Price Rs.999.00</p>
+			<button class="btn btn-primary" onclick="addToCart('Dry Fruits', 999.00, '../jkimg/dry.jpg')">Add to Cart</button>
+		<button type="button" class="btn btn-info" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Buy Now</button>
     </div>
     </div>
     </div>
     
      <div class=" col-md-3">
     <div class="card">
-    <img src="../apimg/img5.jpeg" class="card-img-top" alt="...">
+    <img src="../jkimg/bat.jpg" class="card-img-top" alt="Kashmir Willow Bats">
     <div class="card-body  text-center">
-     <button type="button" class="btn btn-primary">Cart</button>
-   <button type="button" class="btn btn-info">Buy NOW</button>
+		<h5 class="card-title"> Kashmir Willow Bats</h5>
+		<p class="card-text">Starting Price Rs.759.00</p>
+		<button class="btn btn-primary" onclick="addToCart('Iron Deer Candle Holder', 759.00, '../jkimg/bat.jpg')">Add to Cart</button>
+		<button type="button" class="btn btn-info" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Buy Now</button>
+					
     </div>
     </div>
     </div>
     
   </div>
 </div>
-
+<!---- view more -->
+<div class="container" style="padding-top: 50px; margin: 0 auto; width: 100%; text-align: center;">
+    <a th:href="@{'https://www.holidify.com/pages/food-of-arunachal-pradesh-1660.html'}" class="button" style="display: inline-block; background-color: yellowgreen; padding: 0.75rem 1.25rem; border-radius: 10rem; color: rgb(255, 0, 128); text-transform: uppercase; font-size: 1rem; letter-spacing: 0.15rem; transition: all 0.3s; position: relative; overflow: hidden; z-index: 1; text-decoration: none;"
+       onmouseover="this.style.color='black'; this.children[0].style.width='100%';"
+       onmouseout="this.style.color='black'; this.children[0].style.width='0%';" target="_blank">
+     View More
+      <span style="display: block; position: absolute; bottom: 0; left: 0; width: 0%; height: 100%; background-color: #0cf; border-radius: 10rem; z-index: -2; transition: all 0.3s;"></span>
+      <span style="display: block; position: absolute; bottom: 0; left: 0; width: 0%; height: 100%; background-color: #008fb3; border-radius: 10rem; z-index: -1; transition: all 0.3s;"></span>
+    </a>
+	   
+	 </div>
 
 <!-- /////////////////Famouse Food//////////// -->
 
-
+<br>
+<br><br>
 <div class="container">
-<h2> Famous Foods </h2>
+<h2 style="text-align: center; font-family: Georgia;">𝐅𝐚𝐦𝐨𝐮𝐬 𝐅𝐨𝐨𝐝 𝐨𝐟 𝐉𝐚𝐦𝐦𝐮 & 𝐊𝐚𝐬𝐡𝐦𝐢𝐫🍟🍔</h2>
+
+<br>
+<br>
   <div class="row">
     <div class=" col-md-3">
     <div class="card">
-    <img src="../apimg/fimg1.jpg" class="card-img-top" alt="...">
-    <div class="card-body  text-center">
-  <button type="button" class="btn btn-primary">Cart</button>
-   <button type="button" class="btn btn-info">Order Now</button>
+    <img src="../jkimg/rogan.jpg" class="card-img-top" alt="Rogan Josh">
+	    <div class="card-body  text-center">
+			<h5 class="card-title"> Rogan Josh(𝐍𝐨𝐧-𝐯𝐞𝐠) 🟥</h5>
+			<a th:href="@{'https://www.zomato.com'}" target="_blank" class="btn">
+			    <button class="btn" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Order Now</button>
+				
+			</a>
     </div>
     </div>
     </div>
    
     <div class=" col-md-3">
     <div class="card">
-    <img src="../apimg/fimg2.jpg" class="card-img-top" alt="...">
-    <div class="card-body  text-center">
-      <button type="button" class="btn btn-primary">Cart</button>
-   <button type="button" class="btn btn-info">Order Now</button>
+		<img src="../jkimg/modur.jpg" class="card-img-top" alt="Modur Pulao ">
+			    <div class="card-body  text-center">
+					<h5 class="card-title">Modur Pulao (𝐯𝐞𝐠) 🟩</h5>
+					<a th:href="@{'https://www.zomato.com'}" target="_blank" class="btn">
+					    <button class="btn" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Order Now</button>
+						
+					</a>
     </div>
     </div>
     </div>
    
      <div class=" col-md-3">
     <div class="card">
-    <img src="../apimg/fimg3.jpg" class="card-img-top" alt="...">
-    <div class="card-body  text-center">
-        <button type="button" class="btn btn-primary">Cart</button>
-   <button type="button" class="btn btn-info">Order Now</button>
+		<img src="../jkimg/dum.jpg" class="card-img-top" alt="Dum Olav">
+			    <div class="card-body  text-center">
+					<h5 class="card-title">Dum Olav (𝐯𝐞𝐠) 🟩</h5>
+					<a th:href="@{'https://www.zomato.com'}" target="_blank" class="btn">
+					    <button class="btn" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Order Now</button>
+						
+					</a>
     </div>
     </div>
     </div>
     
      <div class=" col-md-3">
     <div class="card">
-    <img src="../apimg/fimg4.jpg" class="card-img-top" alt="...">
-    <div class="card-body  text-center">
-     <button type="button" class="btn btn-primary">Cart</button>
-   <button type="button" class="btn btn-info">Order Now</button>
+		<img src="../jkimg/gos.jpg" class="card-img-top" alt="Goshtaba">
+			    <div class="card-body  text-center">
+					<h5 class="card-title">Goshtaba (𝐍𝐨𝐧-𝐯𝐞𝐠) 🟥</h5>
+					<a th:href="@{'https://www.zomato.com'}" target="_blank" class="btn">
+					<button class="btn" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Order Now</button>
+					</a>
     </div>
-    </div>
+	</div>
     </div>
     
   </div>
@@ -361,40 +416,52 @@ height:280px;}
   <div class="row">
     <div class=" col-md-3">
     <div class="card">
-    <img src="../apimg/fimg1.jpg" class="card-img-top" alt="...">
-    <div class="card-body  text-center">
-  <button type="button" class="btn btn-primary">Cart</button>
-   <button type="button" class="btn btn-info">Order Now</button>
+		<img src="../jkimg/Kahva.jpg" class="card-img-top" alt="Kahva">
+			    <div class="card-body  text-center">
+					<h5 class="card-title">Kahva (𝐯𝐞𝐠) 🟩</h5>
+					<a th:href="@{'https://www.zomato.com'}" target="_blank" class="btn">
+					    <button class="btn" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Order Now</button>
+						
+					</a>
     </div>
     </div>
     </div>
    
     <div class=" col-md-3">
     <div class="card">
-    <img src="../apimg/fimg2.jpg" class="card-img-top" alt="...">
-    <div class="card-body  text-center">
-      <button type="button" class="btn btn-primary">Cart</button>
-   <button type="button" class="btn btn-info">Order Now</button>
+		<img src="../jkimg/shab.jpg" class="card-img-top" alt="Shab Deg">
+			    <div class="card-body  text-center">
+					<h5 class="card-title">Shab Deg (𝐍𝐨𝐧-𝐯𝐞𝐠) 🟥</h5>
+					<a th:href="@{'https://www.zomato.com'}" target="_blank" class="btn">
+					    <button class="btn" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Order Now</button>
+						
+					</a>
     </div>
     </div>
     </div>
    
      <div class=" col-md-3">
     <div class="card">
-    <img src="../apimg/fimg3.jpg" class="card-img-top" alt="...">
-    <div class="card-body  text-center">
-        <button type="button" class="btn btn-primary">Cart</button>
-   <button type="button" class="btn btn-info">Order Now</button>
+		<img src="../jkimg/paneer.jpg" class="card-img-top" alt=" Lyader Tschaman">
+			    <div class="card-body  text-center">
+					<h5 class="card-title"> Lyader Tschaman (𝐯𝐞𝐠) 🟩</h5>
+					<a th:href="@{'https://www.zomato.com'}" target="_blank" class="btn">
+					    <button class="btn" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Order Now</button>
+						
+					</a>
     </div>
     </div>
     </div>
     
      <div class=" col-md-3">
     <div class="card">
-    <img src="../apimg/fimg4.jpg" class="card-img-top" alt="...">
-    <div class="card-body  text-center">
-     <button type="button" class="btn btn-primary">Cart</button>
-   <button type="button" class="btn btn-info">Order Now</button>
+		<img src="../jkimg/kah.jpg" class="card-img-top" alt="Kashmiri Rajma">
+			    <div class="card-body  text-center">
+					<h5 class="card-title">Kashmiri Rajma(𝐯𝐞𝐠) 🟩</h5>
+					<a th:href="@{'https://www.zomato.com'}" target="_blank" class="btn">
+					    <button class="btn" style="background: linear-gradient(to right, #11998E  , #38EF7D);">Order Now</button>
+						
+					</a>
     </div>
     </div>
     </div>
@@ -402,25 +469,28 @@ height:280px;}
   </div>
 </div>
 
-
+<!---- view more -->
+<div class="container" style="padding-top: 50px; margin: 0 auto; width: 100%; text-align: center;">
+    <a th:href="@{'https://www.holidify.com/pages/food-of-arunachal-pradesh-1660.html'}" class="button" style="display: inline-block; background-color: yellowgreen; padding: 0.75rem 1.25rem; border-radius: 10rem; color: rgb(255, 0, 128); text-transform: uppercase; font-size: 1rem; letter-spacing: 0.15rem; transition: all 0.3s; position: relative; overflow: hidden; z-index: 1; text-decoration: none;"
+       onmouseover="this.style.color='black'; this.children[0].style.width='100%';"
+       onmouseout="this.style.color='black'; this.children[0].style.width='0%';" target="_blank">
+     View More
+      <span style="display: block; position: absolute; bottom: 0; left: 0; width: 0%; height: 100%; background-color: #0cf; border-radius: 10rem; z-index: -2; transition: all 0.3s;"></span>
+      <span style="display: block; position: absolute; bottom: 0; left: 0; width: 0%; height: 100%; background-color: #008fb3; border-radius: 10rem; z-index: -1; transition: all 0.3s;"></span>
+    </a>
+	   
+	 </div>
 
 
 <!-- ///////////////////maps///////////////// -->
 <br><br>
 <section>
 <div class="container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929666.8490412864!2d78.11992296885845!3d15.879429281640634!2m3!1f0!2f0!3f0!3m2!1i10
-24!2i768!4f13.1!3m3!1m2!1s0x3a3546f8ae93d47f%3A0x33d1bbbe95adcd83!2sAndhra%20Pradesh!5e0!3m2!1sen!2sin!4v1717049815286!5m2!1sen!2sin" 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406762.5001492165!2d72.62408408016638!3d33.50354941302544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e1092499ffa89d%3A0x6567a6d4697e7f1!2sJammu%20and%20Kashmir!5e0!3m2!1sen!2sin!4v1722832501959!5m2!1sen!2sin" 
 width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </section>
-
 <div th:replace="footer :: footer"></div>
-
-
-
-
-
 </body>
 
 <!-- <script>

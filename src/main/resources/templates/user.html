@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+			    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			         rel="stylesheet"
+			         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			         crossorigin="anonymous">
+					 <link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+					 	integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+					 	crossorigin="anonymous" referrerpolicy="no-referrer" />
+			   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			           integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			           crossorigin="anonymous"></script>
+			   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+			<link rel="stylesheet" href="/css/header.css">
+			<link rel="stylesheet" href="css/footer.css">
+	
+</head>
+  <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+	background-image: url("https://t3.ftcdn.net/jpg/06/27/85/70/360_F_627857017_5r2FsJYJeZfufqiXcUvKCENF3fz4xFyg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+a
+{
+    text-decoration: none;
+}
+.product-card {
+    width: 380px;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 50px auto;
+    background: #fafafa;
+}
+
+.badge {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: green;
+    color: #fff;
+    padding: 3px 10px;
+}
+
+.product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     height: 300px;
+    /*padding: 50px; */
+    background: #f0f0f0;
+}
+
+.product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-details {
+    padding: 30px;
+}
+
+.product-catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 18px;
+}
+
+.product-details h4 a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.product-details h4 a:hover {
+    color: #fbb72c;
+}
+
+.product-details p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #999;
+}
+
+.product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.product-bottom-details div {
+    float: left;
+    width: 50%;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #fbb72c;
+    font-weight: 600;
+}
+
+.product-price small {
+    font-size: 80%;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.product-links {
+    text-align: right;
+}
+
+.product-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.product-links a:hover {
+    color: #fbb72c;
+}
+
+    </style>
+<body>
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-primary shadow fixed-top">
+	  <div class="container">
+	    <a class="navbar-brand" href="#">Bharat Commerce</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarResponsive">
+	      <ul class="navbar-nav ms-auto">
+	        <li class="nav-item active">
+	          <a class="nav-link" href="/">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">View Cart </a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" > Welcome <span th:text="${userName}"></span></a>
+	        </li>
+	        <li class="nav-item">
+	          <a href="/user_logout" class="btn btn-danger">Logout</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+<br>
+	<section class="py-5">
+		<div class="container">
+			       <h2>Welcome, <span th:text="${userName}"></span>😊</h2>
+			   </div>
+	</section>
+	
+	<div class="container-fluid">
+	<div class="row">
+				  <div class="col-md-3">
+		  	<div class="product-card">
+		  	        <div class="badge">Hot</div>
+		  	        <div class="product-tumb">
+		  	          <img src="apimg/sar.jpg" alt="">
+		  	        </div>
+		  	        <div class="product-details">
+		  	          <span class="product-catagory">Mangalagiri Sarees</span>
+		  	          <h4><a href="">Mangalagiri Sarees</a></h4>
+		  	          <p>These much heard about cotton sarees with beautiful zari borders, and no designs on the body are local to this place only. One can find these sarees of varying qualities. </p>
+		  	          <div class="product-bottom-details">
+		  	            <div class="product-price"><small>Rs.1996.00</small>Rs.999.99</div>
+		  	            <div class="product-links">
+		  	              <a href=""><i class="fa fa-heart"></i></a>
+		  	              <a href=""><i class="fa fa-shopping-cart"></i></a>
+		  	            </div>
+		  	          </div>
+		  	        </div></div>
+		  	      </div>
+				  <div class="col-md-3">
+				  	<div class="product-card">
+				  	        <div class="badge">Hot</div>
+				  	        <div class="product-tumb">
+				  	          <img src="apimg/sari.jpg" alt="">
+				  	        </div>
+				  	        <div class="product-details">
+				  	          <span class="product-catagory">Dharmavaram saree</span>
+				  	          <h4><a href="">Dharmavaram saree</a></h4>
+				  	          <p>Dharmavaram Saree has richly woven motifs of flora and fauna and designs 
+								inspired by the temple murals and paintings of the famed Lepakshi temple 
+								in Hindupur, Anantapur district.</p>
+				  	          <div class="product-bottom-details">
+				  	            <div class="product-price"><small>Rs.2596.00</small>Rs.1930.99</div>
+				  	            <div class="product-links">
+				  	              <a href=""><i class="fa fa-heart"></i></a>
+				  	              <a href=""><i class="fa fa-shopping-cart"></i></a>
+				  	            </div>
+				  	          </div>
+				  	        </div></div>
+				  	      </div>
+						  <div class="col-md-3">
+						  		  		  <div class="product-card">
+						  		  		  	        <div class="badge">Hot</div>
+						  		  		  	        <div class="product-tumb">
+						  		  		  	          <img src="https://i.imgur.com/xdbHo4E.png" alt="">
+						  		  		  	        </div>
+						  		  		  	        <div class="product-details">
+						  		  		  	          <span class="product-catagory">Women,bag</span>
+						  		  		  	          <h4><a href="">Women leather bag</a></h4>
+						  		  		  	          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+						  		  		  	          <div class="product-bottom-details">
+						  		  		  	            <div class="product-price"><small>$96.00</small>$230.99</div>
+						  		  		  	            <div class="product-links">
+						  		  		  	              <a href=""><i class="fa fa-heart"></i></a>
+						  		  		  	              <a href=""><i class="fa fa-shopping-cart"></i></a>
+						  		  		  	            </div>
+						  		  		  	          </div>
+						  		  		  	        </div></div>
+						  		  		  	      </div>
+						  <div class="col-md-3">
+		  <div class="product-card">
+		  	        <div class="badge">Famous</div>
+		  	        <div class="product-tumb">
+		  	          <img src="apimg/pain.jpg" alt="">
+		  	        </div>
+		  	        <div class="product-details">
+		  	          <span class="product-catagory">Cheriyal Painting</span>
+		  	          <h4><a href="">Cheriyal Painting</a></h4>
+		  	          <p>This is painted on the cloth that were used by traditional story tellers of Telangana.These storytellers travelled from one village to another, reciting tales of legendary heroes.</p>
+		  	          <div class="product-bottom-details">
+		  	            <div class="product-price"><small>Rs.4585.00</small>Rs.3550.99</div>
+		  	            <div class="product-links">
+		  	              <a href=""><i class="fa fa-heart"></i></a>
+		  	              <a href=""><i class="fa fa-shopping-cart"></i></a>
+		  	            </div>
+		  	          </div>
+		  	        </div></div>
+		  	      </div>
+		  </div></div>
+		  <div class="container-fluid">
+		  	<div class="row">
+				<div class="col-md-3">
+					<div class="product-card">
+					        <div class="badge">Top</div>
+					        <div class="product-tumb">
+					          <img src="https://www.holidify.com/images/cmsuploads/compressed/Etikoppaka_Toys_20180517141934.JPG" alt="">
+					        </div>
+					        <div class="product-details">
+					          <span class="product-catagory">Etikoppaka Toys</span>
+					          <h4><a href="">Etikoppaka Toys</a></h4>
+					          <p>Etikoppaka toys are made out of wood and polished with lacquer colours.
+								These originated in a small village on the banks of river Varaha, and now holds the GI tag for Andhra Pradesh.</p>
+					          <div class="product-bottom-details">
+					            <div class="product-price"><small>Rs.1250.00</small>Rs.130.99</div>
+					            <div class="product-links">
+					              <a href=""><i class="fa fa-heart"></i></a>
+					              <a href=""><i class="fa fa-shopping-cart"></i></a>
+					            </div>
+					          </div>
+					        </div></div>
+					      </div>
+		  		  <div class="col-md-3">
+		  		  	<div class="product-card">
+		  		  	        <div class="badge">Hot</div>
+		  		  	        <div class="product-tumb">
+		  		  	          <img src="https://i.imgur.com/xdbHo4E.png" alt="">
+		  		  	        </div>
+		  		  	        <div class="product-details">
+		  		  	          <span class="product-catagory">Women,bag</span>
+		  		  	          <h4><a href="">Women leather bag</a></h4>
+		  		  	          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+		  		  	          <div class="product-bottom-details">
+		  		  	            <div class="product-price"><small>$96.00</small>$230.99</div>
+		  		  	            <div class="product-links">
+		  		  	              <a href=""><i class="fa fa-heart"></i></a>
+		  		  	              <a href=""><i class="fa fa-shopping-cart"></i></a>
+		  		  	            </div>
+		  		  	          </div>
+		  		  	        </div></div>
+		  		  	      </div>
+		  				  <div class="col-md-3">
+		  				  	<div class="product-card">
+		  				  	        <div class="badge">Hot</div>
+		  				  	        <div class="product-tumb">
+		  				  	          <img src="https://i.imgur.com/xdbHo4E.png" alt="">
+		  				  	        </div>
+		  				  	        <div class="product-details">
+		  				  	          <span class="product-catagory">Women,bag</span>
+		  				  	          <h4><a href="">Women leather bag</a></h4>
+		  				  	          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+		  				  	          <div class="product-bottom-details">
+		  				  	            <div class="product-price"><small>$96.00</small>$230.99</div>
+		  				  	            <div class="product-links">
+		  				  	              <a href=""><i class="fa fa-heart"></i></a>
+		  				  	              <a href=""><i class="fa fa-shopping-cart"></i></a>
+		  				  	            </div>
+		  				  	          </div>
+		  				  	        </div></div>
+		  				  	      </div><div class="col-md-3">
+		  		  <div class="product-card">
+		  		  	        <div class="badge">Hot</div>
+		  		  	        <div class="product-tumb">
+		  		  	          <img src="https://i.imgur.com/xdbHo4E.png" alt="">
+		  		  	        </div>
+		  		  	        <div class="product-details">
+		  		  	          <span class="product-catagory">Women,bag</span>
+		  		  	          <h4><a href="">Women leather bag</a></h4>
+		  		  	          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+		  		  	          <div class="product-bottom-details">
+		  		  	            <div class="product-price"><small>$96.00</small>$230.99</div>
+		  		  	            <div class="product-links">
+		  		  	              <a href=""><i class="fa fa-heart"></i></a>
+		  		  	              <a href=""><i class="fa fa-shopping-cart"></i></a>
+		  		  	            </div>
+		  		  	          </div>
+		  		  	        </div></div>
+		  		  	      </div>
+		  		  </div></div>
+	<section>
+		  </section>
+		  <div th:replace="footer :: footer"></div> 
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

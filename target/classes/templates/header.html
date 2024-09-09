@@ -10,51 +10,61 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/css/header.css">
     <style>
         .navbar-dark .navbar-nav .nav-link.active {
-            color: #ffc107; /* Adjust color as needed */
-        }
+            color: rgb(255, 255, 255); /* Adjust color as needed */
+        }			
+	
     </style>
 </head>
 <body>
     <header>
-        <div class="container-fluid p-1 bg-dark "></div>
-        <div class="container-fluid p-3">
-            <div class="row ">
-                <div class="col-md-3 text-start">
-                    <img src="navimg/india.png" width="50px" height="50px">
-                    <span style="color: purple; text-shadow: 2px 2px 4px #303f9f; font-size: 30px;">Bharat Commerce</span>
-                </div>
-                <div class="col-md-6 text-center text-success">
-                </div>
-                <div class="col-md-3 text-end icon">
-                    <a href="https://www.instagram.com/bharatcommerce_/?hl=en#"><img src="navimg/insta.png" width="25px" height="25px"></a>
-                    <a href="#"><img src="navimg/facebook.png" width="25px" height="25px"></a>
-                    <a href="#"><img src="navimg/x.png" width="25px" height="25px"></a>
-                    <a href="#"><img src="navimg/w.png" width="25px" height="25px"></a>
-                    <a href="/register" class="btn btn-primary">SignUp</a> 
-                    <a href="/login" class="btn btn-primary">SignIn</a> 
-                </div>
-            </div>
-        </div>
+       
+		<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(255, 255, 255);">
+				           <div class="container-fluid"> 
+							<div class="col-md-2 text-start">
+			                    <img src="navimg/bh.png" width="100px" height="100px">
+						        </div>
+							<div class="container-fluid p-3">
+										            <div class="row ">
+										                <div class="col-md-1 text-start">
+										                </div>
+										                <div class="col-md-8 text-center text-success">
+					<h1 style="color: purple; text-shadow: 2px 2px 4px #303f9f; ">Bharat Commerce</h1>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+										                </div>
+										                 <div class="col-md-3 text-end icon">			<br>
+										                    
+										                    <a href="/register" class="btn btn-primary">SignUp</a> 
+										                    <a href="/user_login" class="btn btn-primary">LogIn</a> 
+										                </div>
+										            </div>
+										        </div>
+							
+				           </div>
+				       </nav>
+
+        <nav class="navbar navbar-expand-lg " style="background-image: url(https://media.istockphoto.com/id/1262816692/vector/grunge-vector-tricolour-background-with-an-off-white-centre-and-orange-or-saffron-and-green.jpg?s=612x612&w=0&k=20&c=9rIBeQje_2K6tqqP2pkBRsCxG4mC1mybrY64gJBEaYY=); background-repeat: no-repeat; background-size: cover;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><i class="fa-solid fa-house"></i></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+               
+				<button type="button" class="navbar-toggler bg-primary text-white border-0" data-bs-toggle="collapse"
+				        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				        aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon">≋≋</span> <!-- Optional: Add an icon or text here -->
+				</button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					
+					<a class="navbar-brand" href="#"><i class="fa-solid fa-house"></i></a>
+		
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active"
                                                 aria-current="page" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link active"
-                                                aria-current="page" href="#">About</a></li>
+                                                aria-current="page" href="/about">About</a></li>
                         <li class="nav-item"><a class="nav-link active"
-                                                aria-current="page" href="#">Contact</a></li>
+                                                aria-current="page" href="/contact">Contact</a></li>
                     </ul>
                     <form class="d-flex">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -63,8 +73,10 @@
                         </ul>
                     </form>
                 </div>
+				
             </div>
-        </nav>
+        </nav>		
+			
     </header>
 </body>
 </html>

@@ -7,8 +7,8 @@
         transform: scale(1.2);
         
     }
-    .navbar .nav-item:hover .nav-link{
+   .navbar .nav-item:hover .nav-link{
 	background-color:white;
 	color:blue;
 	border-radius:5px;
-}
+} 

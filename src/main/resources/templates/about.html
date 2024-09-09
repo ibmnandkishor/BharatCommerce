@@ -1,0 +1,425 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> BHARAT COMMERCE WEBSITE BY DEBUG DYNASTY </title>
+    <!-- EXTERNAL LINKS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="/css/header.css">
+    <style>
+		* {
+		  font-family: Nunito, sans-serif;
+		}
+		body{
+			background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWNqYYWZsk3PcIQ4ImskHDqo5dIqLk-qVDNDT4bNBUaq6DXTLEuWfLvUMVbu291_T0Oc&usqp=CAU");
+					background-repeat: no-repeat;
+					 background-size: cover;
+					 
+		}
+
+		.responsive-container-block {
+		  min-height: 75px;
+		  height: fit-content;
+		  width: 100%;
+		  padding-top: 10px;
+		  padding-right: 10px;
+		  padding-bottom: 10px;
+		  padding-left: 10px;
+		  display: flex;
+		  flex-wrap: wrap;
+		  margin-top: 0px;
+		  margin-right: auto;
+		  margin-bottom: 0px;
+		  margin-left: auto;
+		  justify-content: flex-start;
+		}
+
+		.text-blk {
+		  margin-top: 0px;
+		  margin-right: 0px;
+		  margin-bottom: 0px;
+		  margin-left: 0px;
+		  padding-top: 10px;
+		  padding-right: 10px;
+		  padding-bottom: 10px;
+		  padding-left: 10px;
+		  line-height: 25px;
+		}
+
+		.responsive-container-block.bigContainer {
+		  padding-top: 10px;
+		  padding-right: 30px;
+		  padding-bottom: 10px;
+		  padding-left: 30px;
+		  flex-direction: column;
+		  align-items: center;
+		  justify-content: center;
+		}
+
+		.mainImg {
+		  color: black;
+		  width: 55%;
+		  height: 500px;
+		  box-shadow: rgb(0, 0, 0) 0px 5px 10px 7px;
+		  border-top-left-radius: 10px;
+		  border-top-right-radius: 10px;
+		  border-bottom-right-radius: 10px;
+		  border-bottom-left-radius: 10px;
+		}
+
+		.text-blk.headingText {
+		  font-size: 25px;
+		  font-weight: 700;
+		  line-height: 34px;
+		  color: rgb(51, 51, 51);
+		  padding-top: 0px;
+		  padding-right: 10px;
+		  padding-bottom: 0px;
+		  padding-left: 10px;
+		  margin-top: 0px;
+		  margin-right: 0px;
+		  margin-bottom: 10px;
+		  margin-left: 0px;
+		}
+
+		.allText {
+		  padding-top: 0px;
+		  padding-right: 0px;
+		  padding-bottom: 0px;
+		  padding-left: 0px;
+		  margin-top: 0px;
+		  margin-right: 0px;
+		  margin-bottom: 0px;
+		  margin-left: 40px;
+		  width: 40%;
+		  margin: 0 0 0 0;
+		}
+
+		.text-blk.subHeadingText {
+		  color: rgb(102, 102, 102);
+		  font-size: 25px;
+		  line-height: 34px;
+		  font-weight: 700;
+		  padding-top: 0px;
+		  padding-right: 10px;
+		  padding-bottom: 0px;
+		  padding-left: 10px;
+		  margin-top: 0px;
+		  margin-right: 0px;
+		  margin-bottom: 15px;
+		  margin-left: 0px;
+		}
+
+		.text-blk.description {
+		  font-size: 25px;
+		  line-height: 34px;
+		  color: rgb(102, 102, 102);
+		  margin-top: 0px;
+		  margin-right: 0px;
+		  margin-bottom: 50px;
+		  margin-left: 0px;
+		  padding-top: 0px;
+		  padding-right: 10px;
+		  padding-bottom: 0px;
+		  padding-left: 10px;
+		}
+
+		.explore {
+		  font-size: 20px;
+		  line-height: 28px;
+		  color: rgb(255, 255, 255);
+		  background-color: rgb(244, 152, 146);
+		  padding-top: 10px;
+		  padding-right: 50px;
+		  padding-bottom: 10px;
+		  padding-left: 50px;
+		  border-top-width: 0px;
+		  border-right-width: 0px;
+		  border-bottom-width: 0px;
+		  border-left-width: 0px;
+		  border-top-style: outset;
+		  border-right-style: outset;
+		  border-bottom-style: outset;
+		  border-left-style: outset;
+		  border-top-color: rgb(244, 152, 146);
+		  border-right-color: rgb(244, 152, 146);
+		  border-bottom-color: rgb(244, 152, 146);
+		  border-left-color: rgb(244, 152, 146);
+		  border-image-source: initial;
+		  border-image-slice: initial;
+		  border-image-width: initial;
+		  border-image-outset: initial;
+		  border-image-repeat: initial;
+		  cursor: pointer;
+		}
+
+		.explore:hover {
+		  background-image: initial;
+		  background-position-x: initial;
+		  background-position-y: initial;
+		  background-size: initial;
+		  background-repeat-x: initial;
+		  background-repeat-y: initial;
+		  background-attachment: initial;
+		  background-origin: initial;
+		  background-clip: initial;
+		  background-color: rgb(255, 235, 234);
+		  color: rgb(244, 152, 146);
+		}
+
+		.responsive-container-block.Container {
+		  margin-top: 80px;
+		  margin-right: auto;
+		  margin-bottom: 50px;
+		  margin-left: auto;
+		  justify-content: center;
+		  align-items: center;
+		  max-width: 1320px;
+		  padding-top: 10px;
+		  padding-right: 10px;
+		  padding-bottom: 10px;
+		  padding-left: 10px;
+		}
+
+		.responsive-container-block.Container.bottomContainer {
+		  margin-top: 100px;
+		  margin-right: 0px;
+		  margin-bottom: 50px;
+		  margin-left: 0px;
+		  flex-direction: row-reverse;
+		  margin: 100px auto 50px auto;
+		}
+
+		.allText.aboveText {
+		  margin: 0 0 0 40px;
+		}
+
+		.allText.bottomText {
+		  margin: 0 40px 0 0;
+		}
+
+		@media (max-width: 1024px) {
+		  .responsive-container-block.Container {
+		    max-width: 850px;
+		  }
+
+		  .mainImg {
+		    width: 55%;
+		    height: auto;
+		  }
+
+		  .text-blk.description {
+		    font-size: 20px;
+		  }
+
+		  .allText {
+		    width: 40%;
+		    margin-top: 0px;
+		    margin-right: 0px;
+		    margin-bottom: 0px;
+		    margin-left: 20px;
+		  }
+
+		  .responsive-container-block.bigContainer {
+		    padding-top: 10px;
+		    padding-right: 10px;
+		    padding-bottom: 10px;
+		    padding-left: 10px;
+		  }
+
+		  .text-blk.subHeadingText {
+		    font-size: 22px;
+		  }
+
+		  .responsive-container-block.Container.bottomContainer {
+		    margin: 80px auto 50px auto;
+		  }
+
+		  .responsive-container-block.Container {
+		    max-width: 830px;
+		  }
+
+		  .allText.aboveText {
+		    margin: 30px 0 0 40px;
+		  }
+
+		  .allText.bottomText {
+		    margin: 30px 40px 0 0;
+		  }
+		}
+
+		@media (max-width: 768px) {
+		  .mainImg {
+		    width: 90%;
+		  }
+
+		  .allText {
+		    width: 100%;
+		    margin-top: 0px;
+		    margin-right: 0px;
+		    margin-bottom: 0px;
+		    margin-left: 0px;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    padding-top: 0px;
+		    padding-right: 0px;
+		    padding-bottom: 0px;
+		    padding-left: 0px;
+		  }
+
+		  .responsive-container-block.Container {
+		    flex-direction: column;
+		    height: auto;
+		  }
+
+		  .text-blk.headingText {
+		    text-align: center;
+		  }
+
+		  .text-blk.subHeadingText {
+		    text-align: center;
+		    font-size: 25px;
+		  }
+
+		  .text-blk.description {
+		    text-align: center;
+		    font-size: 25px;
+		  }
+
+		  .allText {
+		    margin-top: 40px;
+		    margin-right: 0px;
+		    margin-bottom: 0px;
+		    margin-left: 0px;
+		  }
+
+		  .allText.aboveText {
+		    margin: 40px 0 0 0;
+		  }
+
+		  .responsive-container-block.Container {
+		    margin: 80px auto 50px auto;
+		  }
+
+		  .responsive-container-block.Container.bottomContainer {
+		    margin: 50px auto 50px auto;
+		  }
+
+		  .allText.bottomText {
+		    margin: 40px 0 0 0;
+		  }
+		}
+
+		@media (max-width: 500px) {
+		  .responsive-container-block.Container {
+		    padding-top: 10px;
+		    padding-right: 0px;
+		    padding-bottom: 10px;
+		    padding-left: 0px;
+		    width: 100%;
+		    max-width: 100%;
+		  }
+
+		  .mainImg {
+		    width: 100%;
+		  }
+
+		  .responsive-container-block.bigContainer {
+		    padding-top: 10px;
+		    padding-right: 25px;
+		    padding-bottom: 10px;
+		    padding-left: 25px;
+		  }
+
+		  .text-blk.subHeadingText {
+		    font-size: 25px;
+		    padding-top: 0px;
+		    padding-right: 0px;
+		    padding-bottom: 0px;
+		    padding-left: 0px;
+		  }
+
+		  .text-blk.description {
+		    font-size: 25px;
+		    padding-top: 0px;
+		    padding-right: 0px;
+		    padding-bottom: 0px;
+		    padding-left: 0px;
+		  }
+
+		  .allText {
+		    padding-top: 0px;
+		    padding-right: 0px;
+		    padding-bottom: 0px;
+		    padding-left: 0px;
+		    width: 100%;
+		  }
+		}
+    </style>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	         rel="stylesheet"
+	         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	         crossorigin="anonymous">
+	   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	           integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	           crossorigin="anonymous"></script>
+	   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body><div th:replace="header :: header"></div>
+	<div class="responsive-container-block bigContainer">
+	  <div class="responsive-container-block Container">
+	    <img class="mainImg" src="/about/add.png">
+	    <div class="allText aboveText">
+	      <p class="text-blk headingText">
+	        Our Mission
+	      </p>
+	      <p class="text-blk subHeadingText">
+	        Bharat commerce
+	      </p>
+	      <p class="text-blk description">
+			An e-commerce website is designed to facilitate online buying of products, Use services and Explore INDIA , 
+			providing a digital storefront for businesses. Its primary objective is to know about our INDIA famous things 
+				 By offering a convenient, 24/7 shopping. 
+			 experience.
+	      </p><a href="/">
+	      <button class="explore">
+	        Explore
+	      </button></a>
+	    </div>
+	  </div>
+	  <div class="responsive-container-block Container bottomContainer">
+	    <img class="mainImg" src="/about/ab.jpg">
+	    <div class="allText bottomText">
+	      <p class="text-blk headingText">
+	        Our Vision
+	      </p>
+	      <p class="text-blk subHeadingText">
+	       Bharat Commerce envisions transforming the way India connects with its local
+		    products and artisans through a comprehensive and dynamic e-commerce platform
+	      </p>
+	      <p class="text-blk description">
+			Bharat Commerce envisions becoming the premier online marketplace for 
+			India's diverse and vibrant regional products, uniting the country’s 
+			rich tapestry of local craftsmanship and unique goods under one digital
+			 roof. Our mission is to provide a seamless and inclusive shopping 
+			 experience that showcases the distinctiveness of each Indian state, 
+			 allowing customers to discover and purchase authentic, locally-sourced products from every corner of the nation. 
+	      </p>
+	      <button class="explore">
+	        Explore
+	      </button>
+	    </div>
+	  </div>
+	</div>
+	<div th:replace="footer :: footer"></div> 
+</body>
+</html>

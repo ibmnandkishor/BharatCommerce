@@ -1,0 +1,185 @@
+/* Adjusting the size and alignment of the modal */
+        .modal-dialog {
+            margin: auto;
+            max-width: 40%;
+        }
+
+        .modal-content {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            background: transparent;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            border: none;
+        }
+.modal-header {
+            border-bottom: none;
+            text-align: center;
+            background: linear-gradient(to left, #173942, #93bbec);
+        }
+       
+
+   .modal-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 26px;
+    text-align: center;
+    background: linear-gradient(
+    to right,
+    orange 40%,
+       white 30%,
+    green 10%
+  
+  );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+
+        .modal-body {
+            padding: 30px;
+            background: linear-gradient(to right, #173942, #93bbec);
+            border-radius: 10px;
+        }
+
+        .form-label {
+            color: white;
+            font-weight: bold;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            border: 2px solid #97c1f5;
+            background-color: #e0f7fa;
+            color: #333;
+        }
+
+        .form-control::placeholder {
+            color: #777;
+        }
+
+        .btn-custom {
+            background-color: #ff7f50;
+            border-color: #ff7f50;
+            border-radius: 5px;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #ff4500;
+            border-color: #ff4500;
+        }
+
+        .btn-close {
+            background-color: #89b6ee;
+            color: white;
+            border-radius: 50%;
+            padding: 5px;
+            line-height: 0;
+        }
+
+        .btn-close:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .social-login {
+            margin-top: 20px;
+        }
+
+        .social-login a {
+            text-decoration: none;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .social-login a img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .social-login .btn-google {
+            background-color: #93bbec;
+        }
+
+        .social-login .btn-facebook {
+            background-color:#93bbec;
+        }
+
+        .social-login .btn-insta {
+            background-color: #93bbec;
+        }
+
+        .social-login .btn-google:hover, 
+        .social-login .btn-facebook:hover, 
+        .social-login .btn-insta:hover {
+            opacity: 0.8;
+        }
+        
+        .offers-column {
+            background: linear-gradient(to right, #173942, #93bbec);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .offers-column h4 {
+            font-family: 'Pacifico', cursive;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .offers-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .offers-column ul li {
+            margin-bottom: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .offers-column ul li span {
+            font-weight: bold;
+            color: #e0f7fa;
+        }
+      #offers-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            
+        } 
+        #offer-text {
+			font-family: 'Pacifico', cursive;
+			font-size: 35px;
+			margin-bottom: 20px;
+			color: white;
+			text-align: center;
+			font-weight: bold;
+			font-style: italic;	
+			
+			
+		}
+		#coupon{
+			font-family: 'Pacifico', cursive;
+			font-size: 20px;
+			margin-bottom: 20px;
+			color: red;
+			text-align: center;
+			font-weight: bold;
+			font-style: italic;
+			border-radius: 10px;
+			background: linear-gradient(to right, #173942, #93bbec);
+			padding: 10px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+		}
