@@ -1,12 +1,15 @@
-FROM maven:3.8.6-openjdk-17 AS build
+# Use a different Maven image if the previous one is not available
+FROM maven:3.8.6-openjdk-21 AS build
+
 WORKDIR /app
 COPY pom.xml ./
+RUN mvn dependency:go-offline
 COPY src ./src
-RUN mvn clean package -DskipTests
+RUN mvn package
 
-FROM openjdk:17.0.1-jdk-slim
-WORKDIR /app
-COPY --from=build /app/target/BharatCommerce-0.0.1-SNAPSHOT.jar BharatCommerce.jar
-EXPOSE 4001
-ENTRYPOINT ["java", "-jar", "BharatCommerce.jar"]
- 
+# Use a smaller image for the runtime
+FROM openjdk:21-jdk-slim
+
+COPY --from=build /app/target/your-app.jar /app/your-app.jar
+
+ENTRYPOINT ["java", "-jar", "/app/your-app.jar"]
