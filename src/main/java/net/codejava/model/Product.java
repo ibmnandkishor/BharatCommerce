@@ -18,6 +18,10 @@ public class Product {
     private String category;
     private Double price;
     private String imageUrl; // New field for image URL
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
 
     // Getters and Setters
     public Long getId() {
@@ -67,4 +71,12 @@ public class Product {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+<<<<<<< HEAD
 }
+=======
+
+
+    
+}
+
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45

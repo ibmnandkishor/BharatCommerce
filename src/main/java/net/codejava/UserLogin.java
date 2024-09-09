@@ -160,4 +160,10 @@ public class UserLogin {
         model.addAttribute("success", "Your password has been successfully reset.");
         return "redirect:/user_login"; // Redirect to the login page
     }
+<<<<<<< HEAD
+=======
+    
+ 
+    
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
 }

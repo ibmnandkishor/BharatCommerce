@@ -1,6 +1,10 @@
 package net.codejava.service;
 
 import net.codejava.model.Product;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
 import net.codejava.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

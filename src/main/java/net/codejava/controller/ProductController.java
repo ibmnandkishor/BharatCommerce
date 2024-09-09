@@ -209,4 +209,8 @@ public class ProductController {
         }
         return "redirect:/products/list";
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45

@@ -1,10 +1,13 @@
 package net.codejava.controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import net.codejava.service.ProductService;
 
 
 @Controller
@@ -13,14 +16,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 public class StateController {
+	  @Autowired
+	    private ProductService productService;
 	
 	@GetMapping({"","/"})
 	public String index() {
 		return "index";
 	}
 	@GetMapping({"","/ap"})
-	public String showstate() {
+	public String showstate(Model model) {
+		 model.addAttribute("products", productService.getAllProducts());
 		return "statepage/ap";
+		
 	}  
 	
 	

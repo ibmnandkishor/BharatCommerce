@@ -176,9 +176,80 @@ height:280px;}
 <br>
 
 
+  <br><br><br>
+
+   <!-- Product Cards -->
+    <div class="container">
+        <div class="row">
+            <!-- Start of Card -->
+            <div class="col-md-3 mb-4" th:each="product, iterStat : ${products}">
+                <div class="card h-100">
+                    <img th:src="@{${product.imageUrl}}" class="card-img-top" alt="Product Image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" th:text="${product.name}">Product Name</h5>
+                        <p class="card-text" th:text="'₹' + ${product.price}">Price</p>                    
+                        <form th:action="@{/cart/add}" method="post" class="d-flex justify-content-center">
+                           <input type="hidden" name="productId" th:value="${product.id}" />
+						   <input type="number" name="quantity" value="1" min="1" class="form-control w-25 me-2" />
+
+                            <button type="submit" class="btn btn-success">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for more products -->
+        </div>
+    </div>
+    
+   <!-- Add the following script to handle "Add to Cart" functionality -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Fetch the cart count from the server
+    fetch('/cart/count')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('cart-count').innerText = data.count;
+        })
+        .catch(error => console.error('Error fetching cart count:', error));
+
+    // Handle form submission for "Add to Cart"
+    document.querySelectorAll('form[action="/cart/add"]').forEach(form => {
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('cart-count').innerText = data.count;
+                    alert('Product added to cart!');
+                } else {
+                    alert('Failed to add product to cart. ' + (data.message || ''));
+                }
+            })
+            .catch(error => console.error('Error adding product to cart:', error));
+        });
+    });
+});
+</script>
+
+
+</body>
+</html>
+
+
+
+
+<!-- ----------------------------------------------------
+
+
 <div class="row">
     <div class=" col-md-2"> 
-    <!--<img src="../telanganaimg/img1.jpeg" class="card-img-top" alt="..." height="400">-->
+    <img src="../telanganaimg/img1.jpeg" class="card-img-top" alt="..." height="400">
     </div>
    
     <div class=" col-md-8">
@@ -205,16 +276,14 @@ height:280px;}
 	</div>
    
     <div class=" col-md-2">
-    <!--<img src="../telanganaimg/img1.jpeg" class="card-img-top" alt="..." height="400">-->
+    <img src="../telanganaimg/img1.jpeg" class="card-img-top" alt="..." height="400">
     </div>
     
   </div>
 
-<br><br>
-  <br><br>
-<br><br>
 
 
+<<<<<<< HEAD
 <!--  famous clothes -->
 
 <div class="container">
@@ -450,6 +519,9 @@ height:280px;}
 </div>
 
 <!---- view more -->
+=======
+-- view more
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
 <div class="container" style="padding-top: 50px; margin: 0 auto; width: 100%; text-align: center;">
     <a th:href="@{'https://www.holidify.com/pages/food-of-arunachal-pradesh-1660.html'}" class="button" style="display: inline-block; background-color: yellowgreen; padding: 0.75rem 1.25rem; border-radius: 10rem; color: rgb(255, 0, 128); text-transform: uppercase; font-size: 1rem; letter-spacing: 0.15rem; transition: all 0.3s; position: relative; overflow: hidden; z-index: 1; text-decoration: none;"
        onmouseover="this.style.color='black'; this.children[0].style.width='100%';"
@@ -462,7 +534,7 @@ height:280px;}
 	 </div>
 
 
-<!-- ///////////////////maps///////////////// -->
+///////////////////maps/////////////////
 <br><br>
 <h1 style="text-align:center;">🆅🅸🅴🆆 🅼🅰🅿</h1>
 <section>
@@ -473,6 +545,7 @@ width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" re
 </div>
 </section>
 
+<<<<<<< HEAD
 <div th:replace="footer :: footer"></div>
 
 
@@ -564,3 +637,6 @@ width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" re
 
 
 </html>
+=======
+<div th:replace="footer :: footer"></div> -->
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45

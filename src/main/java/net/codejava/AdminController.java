@@ -32,7 +32,11 @@ public class AdminController {
         if (adminUsername.equals(username) && adminPassword.equals(password)) {
             // Set session attribute for admin
             session.setAttribute("adminLoggedIn", true);
+<<<<<<< HEAD
             return "redirect:/products/list";
+=======
+            return "redirect:/products/home";
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
         } else {
             model.addAttribute("error", "Invalid username or password");
             return "admin_login";

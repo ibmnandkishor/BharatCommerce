@@ -1,5 +1,7 @@
 package net.codejava;
 
+import java.util.List;
+
 import javax.persistence.Column;
 
 
@@ -8,7 +10,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+
 
 @Entity
 @Table(name = "users")
@@ -35,6 +40,10 @@ public class User {
 	
 	private String otp;
 	
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
 
 	public Long getId() {
 		return id;
@@ -102,5 +111,13 @@ public class User {
 	    public void setOtp(String otp) {
 	        this.otp = otp;
 	    }
+<<<<<<< HEAD
+=======
+
+	
+
+
+		
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
 	
 }

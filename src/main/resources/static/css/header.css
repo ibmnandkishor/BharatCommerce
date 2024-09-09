@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 .navbar-dark .navbar-nav .nav-link.active {
+=======
+
+        .navbar-dark .navbar-nav .nav-link.active {
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
             color: #ffc107; /* Adjust color as needed */
         }
         
@@ -63,4 +68,9 @@
 
         .text-content.visible {
             opacity: 1; /* Make content visible when class is added */
+<<<<<<< HEAD
         }
+=======
+        }
+ 
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45

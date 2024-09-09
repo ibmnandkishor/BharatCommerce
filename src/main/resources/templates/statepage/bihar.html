@@ -494,7 +494,10 @@ height:280px;}
     </a>
 	   
 	 </div>
+<<<<<<< HEAD
 	<!-- <a href="#top"><img src="../brimg/arrow.png" height="100" width="100" alt="manisha" style="float: right;"/> </a> -->
+=======
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
 
 
 <!-- ///////////////////maps///////////////// -->
@@ -565,48 +568,65 @@ height:280px;}
         });
     </script> -->
     
-    <script>
-        // Cart functionality
-        let cart = [];
+   <script>
+    // Retrieve cart from localStorage or initialize it
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        function addToCart(product, price, image) {
-            cart.push({ product, price, image });
-            alert(`${product} has been added to your cart.`);
-            updateCartView();
-            updateCartCount();
-        }
+    // Function to add items to the cart
+    function addToCart(product, price, image) {
+        cart.push({ product, price, image });
+        alert(`${product} has been added to your cart.`);
+        saveCart();
+        updateCartView();
+        updateCartCount();
+    }
 
-        function updateCartView() {
-            const cartItems = document.getElementById('cart-items');
-            const cartTotal = document.getElementById('cart-total');
-            cartItems.innerHTML = '';
-            let total = 0;
+    // Function to save cart to localStorage
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
 
-            cart.forEach(item => {
-                const li = document.createElement('li');
-                li.classList.add('list-group-item', 'd-flex', 'align-items-center');
-                
-                const img = document.createElement('img');
-                img.src = item.image;
-                img.alt = item.product;
-                img.classList.add('img-thumbnail', 'mr-3');
-                
-                li.appendChild(img);
-                li.innerHTML += `${item.product} - Rs.${item.price.toFixed(2)}`;
-                cartItems.appendChild(li);
-                total += item.price;
-            });
+    // Function to update the cart view
+    function updateCartView() {
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        cartItems.innerHTML = '';
+        let total = 0;
 
-            cartTotal.textContent = total.toFixed(2);
-        }
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.classList.add('list-group-item', 'd-flex', 'align-items-center');
 
-        function updateCartCount() {
-            const cartCount = document.getElementById('cart-count');
-            cartCount.textContent = cart.length;
-        }
+            const img = document.createElement('img');
+            img.src = item.image;
+            img.alt = item.product;
+            img.classList.add('img-thumbnail', 'mr-3');
 
-        document.getElementById('checkout').addEventListener('click', function() {
-            alert('Proceeding to checkout!');
+            li.appendChild(img);
+            li.innerHTML += `${item.product} - Rs.${item.price.toFixed(2)}`;
+            cartItems.appendChild(li);
+            total += item.price;
         });
-    </script>
+
+        cartTotal.textContent = total.toFixed(2);
+    }
+
+    // Function to update the cart count
+    function updateCartCount() {
+        const cartCount = document.getElementById('cart-count');
+        cartCount.textContent = cart.length;
+    }
+
+    // Checkout button functionality
+    document.getElementById('checkout').addEventListener('click', function() {
+        alert('Proceeding to checkout!');
+    });
+
+    // Load cart data when the page is loaded
+    window.addEventListener('load', function() {
+        updateCartView();
+        updateCartCount();
+    });
+</script>
+
 </html>

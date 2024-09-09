@@ -11,4 +11,27 @@
 	background-color:white;
 	color:blue;
 	border-radius:5px;
+<<<<<<< HEAD
 } 
+=======
+} 
+
+ .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #555;
+}
+>>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
