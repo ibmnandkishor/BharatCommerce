@@ -1,6 +1,8 @@
 package net.codejava;
 
 import javax.servlet.http.HttpSession;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -8,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
 import net.codejava.service.OtpService;
 
 @Controller
@@ -39,7 +42,7 @@ public class UserLogin {
                             Model model) {
         User user = userRepository.findByEmail(email);
         if (user != null && passwordEncoder.matches(password, user.getPassword())) {
-            session.setAttribute("adminLoggedIn", true);
+            session.setAttribute("userLoggedIn", true); // Updated attribute name
             session.setAttribute("verifiedUser", user); // Store user in session
             return "redirect:/user";
         } else {
@@ -56,7 +59,7 @@ public class UserLogin {
 
     @GetMapping("/user")
     public String user(HttpSession session, Model model) {
-        if (session.getAttribute("adminLoggedIn") == null) {
+        if (session.getAttribute("userLoggedIn") == null) { // Updated attribute name
             return "redirect:/user_login";
         }
 
@@ -98,12 +101,12 @@ public class UserLogin {
 
         otpService.saveOtp(toEmail, otp); // Save OTP in the database
     }
-    
+
     @GetMapping("/otpverify")
     public String otpverify() {
         return "otpverify";
     }
-    
+
     @PostMapping("/verify")
     public String verify(@RequestParam String otp, HttpSession session, Model model) {
         String email = (String) session.getAttribute("email");
@@ -113,7 +116,7 @@ public class UserLogin {
         }
 
         Otp otpRecord = otpService.findByOtpAndEmail(otp, email);
-        
+
         if (otpRecord == null) {
             model.addAttribute("error", "Invalid OTP");
             return "otpverify";
@@ -130,14 +133,14 @@ public class UserLogin {
         // Process after successful OTP verification
         User user = userRepository.findByEmail(email);
         session.setAttribute("verifiedUser", user);
-        
+
         return "newPassword";  // Redirect to a success page or desired location after verification
     }
-    
+
     @PostMapping("/resetPassword")
-    public String resetPassword(@RequestParam String newPassword, 
+    public String resetPassword(@RequestParam String newPassword,
                                 @RequestParam String confirmPassword,
-                                HttpSession session, 
+                                HttpSession session,
                                 Model model) {
         User user = (User) session.getAttribute("verifiedUser");
 
@@ -150,20 +153,15 @@ public class UserLogin {
             model.addAttribute("error", "Passwords do not match.");
             return "resetPassword"; // Return to the reset password page
         }
-        
+
         // Update the user's password
         user.setPassword(passwordEncoder.encode(newPassword));
         userRepository.save(user);
-        
+
         session.invalidate(); // Invalidate the session after successful password reset
 
         model.addAttribute("success", "Your password has been successfully reset.");
         return "redirect:/user_login"; // Redirect to the login page
     }
-<<<<<<< HEAD
-=======
-    
- 
-    
->>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
+
 }
