@@ -1,5 +1,5 @@
 # Use a different Maven image if the previous one is not available
-FROM maven:3.8.6-openjdk-20 AS build
+FROM maven:3.8.6-jdk-11 AS build
 
 WORKDIR /app
 COPY pom.xml ./
