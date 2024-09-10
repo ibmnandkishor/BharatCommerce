@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-/* Adjusting the size and alignment of the modal */
-=======
+
  /* Adjusting the size and alignment of the modal */
->>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
         .modal-dialog {
             margin: auto;
             max-width: 40%;
@@ -174,23 +171,3 @@
 			
 			
 		}
-		#coupon{
-			font-family: 'Pacifico', cursive;
-			font-size: 20px;
-			margin-bottom: 20px;
-			color: red;
-			text-align: center;
-			font-weight: bold;
-			font-style: italic;
-			border-radius: 10px;
-			background: linear-gradient(to right, #173942, #93bbec);
-			padding: 10px;
-<<<<<<< HEAD
-			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-		}
-=======
-			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);}
-			
-		
-			
->>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
