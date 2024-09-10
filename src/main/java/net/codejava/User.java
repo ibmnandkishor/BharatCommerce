@@ -1,11 +1,11 @@
+
 package net.codejava;
-
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
-
-
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,37 +13,45 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import net.codejava.model.CartItem;
+
 
 
 @Entity
 @Table(name = "users")
 public class User {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Column(nullable = false, unique = true, length = 45)
 	private String email;
-	
+
 	@Column(nullable = false, length = 64)
 	private String password;
-	
+
 	@Column(name = "first_name", nullable = false, length = 20)
 	private String firstName;
-	
+
 	@Column(name = "last_name", nullable = false, length = 20)
 	private String lastName;
 	private String captcha;
 	private String hiddenCaptcha;
 	private String realCaptcha;
-	
+
 	private String otp;
+
+	@OneToMany(mappedBy = "user")
+    private List<CartItem> cartItems;
 	
-<<<<<<< HEAD
-=======
-	
->>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
+	 public List<CartItem> getCartItems() {
+	        return cartItems;
+	    }
+
+	    public void setCartItems(List<CartItem> cartItems) {
+	        this.cartItems = cartItems;
+	    }
 
 	public Long getId() {
 		return id;
@@ -103,7 +111,7 @@ public class User {
 	public void setRealCaptcha(String realCaptcha) {
 		this.realCaptcha = realCaptcha;
 	}
-	
+
 	 public String getOtp() {
 	        return otp;
 	    }
@@ -111,13 +119,5 @@ public class User {
 	    public void setOtp(String otp) {
 	        this.otp = otp;
 	    }
-<<<<<<< HEAD
-=======
 
-	
-
-
-		
->>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
-	
 }

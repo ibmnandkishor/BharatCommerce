@@ -1,7 +1,9 @@
+
 package net.codejava;
 
 
 import java.security.SecureRandom;
+
 
 public class OtpGenerator {
 

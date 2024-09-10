@@ -1,3 +1,4 @@
+
 package net.codejava;
 
 import java.util.Random;
@@ -14,5 +15,4 @@ class CaptchaService {
             captcha.append(characters.charAt(random.nextInt(characters.length())));
         }
         return captcha.toString();
-    }
-}
+    }}

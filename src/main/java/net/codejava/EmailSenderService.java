@@ -1,3 +1,4 @@
+
 package net.codejava;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,5 +18,4 @@ public class EmailSenderService {
         message.setSubject(subject);
         message.setText(body);
         mailSender.send(message);
-    }
-}
+    }}
