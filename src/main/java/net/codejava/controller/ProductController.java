@@ -1,22 +1,31 @@
+
 package net.codejava.controller;
 
-import net.codejava.User;
-import net.codejava.UserRepository;
-import net.codejava.model.Product;
-import net.codejava.service.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Optional;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
+import net.codejava.User;
+import net.codejava.UserRepository;
+import net.codejava.model.Product;
+import net.codejava.service.ProductService;
 
 @Controller
 @RequestMapping("/products")
@@ -54,13 +63,13 @@ public class ProductController {
         if (session.getAttribute("adminLoggedIn") == null) {
             return "redirect:/admin";
         }
-        
+
         // Fetch all users from the database
         List<User> listUsers = userRepo.findAll();
-        
+
         // Add the list of users to the model
         model.addAttribute("listUsers", listUsers);
-        
+
         // Return the view to display users
         return "products/user";
     }
@@ -209,8 +218,4 @@ public class ProductController {
         }
         return "redirect:/products/list";
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
