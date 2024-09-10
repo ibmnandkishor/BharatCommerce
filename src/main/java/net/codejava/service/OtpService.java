@@ -1,13 +1,15 @@
+
 package net.codejava.service;
 
 
 
-import net.codejava.Otp;
-import net.codejava.repository.OtpRepository;
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import net.codejava.Otp;
+import net.codejava.repository.OtpRepository;
 
 @Service
 public class OtpService {
@@ -32,5 +34,4 @@ public class OtpService {
     public void markAsVerified(Otp otpRecord) {
         otpRecord.setUsed(true);
         otpRepository.save(otpRecord);
-    }
-}
+    }}

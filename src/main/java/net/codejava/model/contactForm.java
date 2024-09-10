@@ -1,3 +1,4 @@
+
 package net.codejava.model;
 
 
@@ -19,8 +20,5 @@ public class contactForm {
 
     public String getMessage() { return message; }
     public void setMessage(String message) { this.message = message; }
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45

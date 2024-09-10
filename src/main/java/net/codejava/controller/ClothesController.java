@@ -1,7 +1,6 @@
 package net.codejava.controller;
 
 import org.springframework.stereotype.Controller;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -13,12 +12,12 @@ public class ClothesController {
 	public String tskid() {
 		return "clothes/tskid";
 	}
-	
+
 	@GetMapping({"","/tsmen"})
 	public String tsmen() {
 		return "clothes/tsmen";
 	}
-	
+
 	@GetMapping({"","/tswomen"})
 	public String tswomen() {
 		return "clothes/tswomen";
@@ -35,7 +34,7 @@ public class ClothesController {
 	public String apwomen() {
 		return "clothes/apwomen";
 	}
-	
+
 	@GetMapping({"","/arkid"})
 	public String arkid() {
 		return "clothes/arkid";
@@ -48,7 +47,7 @@ public class ClothesController {
 	public String arwomen() {
 		return "clothes/arwomen";
 	}
-	
+
 	@GetMapping({"","/assamkid"})
 	public String assamkid() {
 		return "clothes/assamkid";
@@ -61,7 +60,7 @@ public class ClothesController {
 	public String assamwomen() {
 		return "clothes/assamwomen";
 	}
-	
+
 	@GetMapping({"","/biharkid"})
 	public String biharkid() {
 		return "clothes/biharkid";
@@ -70,17 +69,17 @@ public class ClothesController {
 	public String biharmen() {
 		return "clothes/biharmen";
 	}
-	
+
 	@GetMapping({"","/biharwomen"})
 	public String biharwomen() {
 		return "clothes/biharwomen";
 	}
-	
+
 	@GetMapping({"","/cgkid"})
 	public String cgkid() {
 		return "clothes/cgkid";
 	}
-	
+
 	@GetMapping({"","/cgmen"})
 	public String cgmen() {
 		return "clothes/cgmen";
@@ -89,12 +88,12 @@ public class ClothesController {
 	public String cgwomen() {
 		return "clothes/cgwomen";
 	}
-	
+
 	@GetMapping({"","/delhikid"})
 	public String delhikid() {
 		return "clothes/delhikid";
 	}
-	
+
 	@GetMapping({"","/delhimen"})
 	public String delhimen() {
 		return "clothes/delhimen";
@@ -103,7 +102,7 @@ public class ClothesController {
 	public String delhiwomen() {
 		return "clothes/delhiwomen";
 	}
-	
+
 	@GetMapping({"","/goakid"})
 	public String goakid() {
 		return "clothes/goakid";
@@ -116,7 +115,7 @@ public class ClothesController {
 	public String goawomen() {
 		return "clothes/goawomen";
 	}
-	
+
 	@GetMapping({"","/gjkid"})
 	public String gjkid() {
 		return "clothes/gjkid";
@@ -129,7 +128,7 @@ public class ClothesController {
 	public String gjwomen() {
 		return "clothes/gjwomen";
 	}
-	
+
 	@GetMapping({"","/hmkid"})
 	public String hmkid() {
 		return "clothes/hmkid";
@@ -142,7 +141,7 @@ public class ClothesController {
 	public String hmwomen() {
 		return "clothes/hmwomen";
 	}
-	
+
 	@GetMapping({"","/hrkid"})
 	public String hrkid() {
 		return "clothes/hrkid";
@@ -179,7 +178,7 @@ public class ClothesController {
 	public String jhwomen() {
 		return "clothes/jhwomen";
 	}
-	
+
 	@GetMapping({"","/kakid"})
 	public String kakid() {
 		return "clothes/kakid";
@@ -192,7 +191,7 @@ public class ClothesController {
 	public String kawomen() {
 		return "clothes/kawomen";
 	}
-	
+
 	@GetMapping({"","/klkid"})
 	public String klkid() {
 		return "clothes/klkid";
@@ -205,7 +204,7 @@ public class ClothesController {
 	public String klwomen() {
 		return "clothes/klwomen";
 	}
-	
+
 	@GetMapping({"","/mhkid"})
 	public String mhkid() {
 		return "clothes/mhkid";
@@ -218,7 +217,7 @@ public class ClothesController {
 	public String mhwomen() {
 		return "clothes/mhwomen";
 	}
-	
+
 	@GetMapping({"","/mgkid"})
 	public String mgkid() {
 		return "clothes/mgkid";
@@ -231,7 +230,7 @@ public class ClothesController {
 	public String mgwomen() {
 		return "clothes/mgwomen";
 	}
-	
+
 	@GetMapping({"","/mzkid"})
 	public String mzkid() {
 		return "clothes/mzkid";
@@ -244,7 +243,7 @@ public class ClothesController {
 	public String mzwomen() {
 		return "clothes/mzwomen";
 	}
-	
+
 	@GetMapping({"","/mpkid"})
 	public String mpkid() {
 		return "clothes/mpkid";
@@ -257,7 +256,7 @@ public class ClothesController {
 	public String mpwomen() {
 		return "clothes/mpwomen";
 	}
-	
+
 	@GetMapping({"","/ngkid"})
 	public String ngkid() {
 		return "clothes/ngkid";
@@ -270,7 +269,7 @@ public class ClothesController {
 	public String ngwomen() {
 		return "clothes/ngwomen";
 	}
-	
+
 	@GetMapping({"","/orkid"})
 	public String orkid() {
 		return "clothes/orkid";
@@ -283,7 +282,7 @@ public class ClothesController {
 	public String orwomen() {
 		return "clothes/orwomen";
 	}
-	
+
 	@GetMapping({"","/pbkid"})
 	public String pbkid() {
 		return "clothes/pbkid";
@@ -296,8 +295,8 @@ public class ClothesController {
 	public String pbwomen() {
 		return "clothes/pbwomen";
 	}
-	
-	
+
+
 	@GetMapping({"","/rjkid"})
 	public String rjkid() {
 		return "clothes/rjkid";
@@ -310,7 +309,7 @@ public class ClothesController {
 	public String rjwomen() {
 		return "clothes/rjwomen";
 	}
-	
+
 	@GetMapping({"","/skkid"})
 	public String skkid() {
 		return "clothes/skkid";
@@ -323,7 +322,7 @@ public class ClothesController {
 	public String skwomen() {
 		return "clothes/skwomen";
 	}
-	
+
 	@GetMapping({"","/tmkid"})
 	public String tmkid() {
 		return "clothes/tmkid";
@@ -336,7 +335,7 @@ public class ClothesController {
 	public String tmwomen() {
 		return "clothes/tmwomen";
 	}
-	
+
 	@GetMapping({"","/trkid"})
 	public String trkid() {
 		return "clothes/trkid";
@@ -349,8 +348,8 @@ public class ClothesController {
 	public String trwomen() {
 		return "clothes/trwomen";
 	}
-	
-	
+
+
 	@GetMapping({"","/ukkid"})
 	public String ukkid() {
 		return "clothes/ukkid";
@@ -363,7 +362,7 @@ public class ClothesController {
 	public String ukwomen() {
 		return "clothes/ukwomen";
 	}
-	
+
 	@GetMapping({"","/upkid"})
 	public String upkid() {
 		return "clothes/upkid";
@@ -376,7 +375,7 @@ public class ClothesController {
 	public String upwomen() {
 		return "clothes/upwomen";
 	}
-	
+
 	@GetMapping({"","/wbkid"})
 	public String wbkid() {
 		return "clothes/wbkid";

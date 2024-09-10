@@ -1,16 +1,14 @@
+
 package net.codejava.service;
-
-import net.codejava.model.Product;
-<<<<<<< HEAD
-=======
-
->>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
-import net.codejava.repository.ProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import net.codejava.model.Product;
+import net.codejava.repository.ProductRepository;
 
 @Service
 public class ProductServiceImpl implements ProductService {
