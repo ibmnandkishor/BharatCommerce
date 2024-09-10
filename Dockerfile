@@ -20,4 +20,4 @@ FROM openjdk:11-jre-slim
 COPY --from=build /app/target/SpringBootRegistrationLogin.jar /app/your-app.jar
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "/app/your-app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/SpringBootRegistrationLogin.jar"]
