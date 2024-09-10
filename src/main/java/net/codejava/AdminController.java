@@ -1,16 +1,14 @@
+
 package net.codejava;
 
-import org.springframework.stereotype.Controller;
+import javax.servlet.http.HttpSession;
 
+
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-
-import java.util.List;
-
-import javax.servlet.http.HttpSession;
 
 @Controller
 public class AdminController {
@@ -21,8 +19,8 @@ public class AdminController {
     }
 
     @PostMapping("/admin_login")
-    public String adminLogin(@RequestParam("username") String username, 
-                             @RequestParam("password") String password, 
+    public String adminLogin(@RequestParam("username") String username,
+                             @RequestParam("password") String password,
                              HttpSession session,
                              Model model) {
         // Replace this with your actual admin credentials
@@ -32,11 +30,7 @@ public class AdminController {
         if (adminUsername.equals(username) && adminPassword.equals(password)) {
             // Set session attribute for admin
             session.setAttribute("adminLoggedIn", true);
-<<<<<<< HEAD
-            return "redirect:/products/list";
-=======
             return "redirect:/products/home";
->>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
         } else {
             model.addAttribute("error", "Invalid username or password");
             return "admin_login";
@@ -49,8 +43,8 @@ public class AdminController {
         session.invalidate();
         return "redirect:/admin";
     }
-    
-    
-  
- 
+
+
+
+
 }
