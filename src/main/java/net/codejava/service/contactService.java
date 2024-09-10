@@ -9,11 +9,7 @@ import net.codejava.model.contactForm;
 
 @Service
 public class contactService {
-<<<<<<< HEAD
- 
-=======
 
->>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
     @Autowired
     private JavaMailSender mailSender;
 
@@ -25,8 +21,4 @@ public class contactService {
         message.setReplyTo(contactForm.getEmail());
         mailSender.send(message);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 8980fc56bcad5e7dcb1e9b725e5445738904dc45
