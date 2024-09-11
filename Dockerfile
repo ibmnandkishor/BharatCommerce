@@ -17,7 +17,7 @@ RUN mvn package
 
 # Use a smaller image for the runtime
 FROM openjdk:11-jre-slim
-COPY app/SpringBootRegistrationLogin.jar /app/SpringBootRegistrationLogin.jar
+COPY  /app/SpringBootRegistrationLogin.jar
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "/app/SpringBootRegistrationLogin.jar"]
